@@ -4,3 +4,6 @@ Created GitHub Repository and Updated Journal Script
 Wed, Mar 4, 2020 8:44:38 PM
 unity initial setup plus number wizard with improvements
 
+Wed, Mar 4, 2020 9:00:52 PM
+add scripts
+
