@@ -50,8 +50,7 @@ public class NumberWizard : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Return))
         {
-            Debug.Log("Your number should be: " + guess + ".");
-            StartGame();
+            NumberGuess();
         }
     }
     
@@ -66,8 +65,7 @@ public class NumberWizard : MonoBehaviour
         if (guess == max - 1)
         {
             guess = max;
-            Debug.Log("Your number should be: " + guess + ".");
-            StartGame();
+            NumberGuess();
         }
     }
    
@@ -75,8 +73,14 @@ public class NumberWizard : MonoBehaviour
     {
         if (min == guess)
         {
-            Debug.Log("Your number should be: " + guess + ".");
-            StartGame();
+            NumberGuess();
         }
     }
+
+    void NumberGuess()
+    {
+        Debug.Log("Your number should be: " + guess + ".");
+        StartGame();
+    }
+
 }
