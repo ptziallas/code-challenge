@@ -19,3 +19,6 @@ NumberWizard hotfix
 Fri, Mar 6, 2020 7:19:23 PM
 check compiling
 
+Sat, Mar 7, 2020 7:25:55 PM
+Make Number Wizard UI
+
