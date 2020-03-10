@@ -5,11 +5,11 @@ using UnityEngine;
 public class LoseCollider : MonoBehaviour
 {
 
-    [SerializeField] public SceneLoader sceneLoader;
+   /*[SerializeField]*/ public SceneLoader sceneLoader;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        sceneLoader.GameOver();
+        sceneLoader.GameOver(); // edw giati dn xreiastike?
     }
 
 }
