@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
 
-    /*int instance = 0;
+    GameStatus gameStatus; //1
 
-    void Start()
+    public void Start()
     {
-        Debug.Log(instance);
-    }*/
+        gameStatus = FindObjectOfType<GameStatus>(); //1 8a borouse na einai sto idio to method
+    }
 
     public void LoadNextScene()
     {
@@ -21,6 +21,7 @@ public class SceneLoader : MonoBehaviour
     public void LoadStartScene()
     {
         SceneManager.LoadScene(0);
+        ResetScore();
     }
 
     public void QuitGame()
@@ -31,6 +32,12 @@ public class SceneLoader : MonoBehaviour
     public void GameOver()
     {
         SceneManager.LoadScene("Game Over");
+    }
+
+    public void ResetScore()
+    {
+        gameStatus.DestroyInstance();  //1
+        //FindObjectOfType<GameStatus>().DestroyInstance();  2
     }
 
 }

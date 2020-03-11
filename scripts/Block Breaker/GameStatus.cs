@@ -46,4 +46,9 @@ public class GameStatus : MonoBehaviour
         CurrentScoreText();
     }
 
+    public void DestroyInstance()
+    {
+        Destroy(gameObject);
+    }
+
 }
