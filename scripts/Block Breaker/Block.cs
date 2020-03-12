@@ -9,7 +9,6 @@ public class Block : MonoBehaviour
     [SerializeField] AudioClip breakSound;
     Level level;
     [SerializeField] GameObject blockSparklesVFX;
-    [SerializeField] int maxHits;
     [SerializeField] int timesHit; //serialized for debug
     [SerializeField] Sprite[] hitSprites;
     //GameStatus gameStatus; 1
@@ -40,6 +39,7 @@ public class Block : MonoBehaviour
     private void HandleHit()
     {
         timesHit++;
+        int maxHits = hitSprites.Length + 1; // isws dhlwsh ektos
         if (timesHit >= maxHits)
         {
             DestroyBlock();
@@ -53,7 +53,14 @@ public class Block : MonoBehaviour
     private void ShowNextHitSprite()
     {
         int spriteIndex = timesHit - 1;  // dhlwsh ektos
-        GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
+        if (hitSprites[spriteIndex] != null)
+        {
+            GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
+        }
+        else
+        {
+            Debug.LogError("Block sprite is missing from array" + gameObject.name); // testing
+        }
     }
 
     private void DestroyBlock()

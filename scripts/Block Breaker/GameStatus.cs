@@ -10,6 +10,7 @@ public class GameStatus : MonoBehaviour
     [Range(0.1f , 10f)] [SerializeField] float gameSpeed = 1f;
     [SerializeField] int pointsPerBlockDestroyed =2;
     [SerializeField] int currentScore = 0; //why grey
+    [SerializeField] bool isAutoPlayEnabled;
 
     private void Awake() //singleton
     {
@@ -51,4 +52,9 @@ public class GameStatus : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public bool IsAutoPlayEnabled()
+    {
+        return isAutoPlayEnabled;
+    }
+    
 }
