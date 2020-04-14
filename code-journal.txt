@@ -118,3 +118,6 @@ code refining
 Mon, Apr 13, 2020 4:42:53 PM
 create enemy, implement turn system
 
+Tue, Apr 14, 2020 11:48:13 PM
+fixing technical difficulties
+
